@@ -1,0 +1,66 @@
+.header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 70px;
+    z-index: 1;
+    overflow: hidden;
+
+    &__title {
+        writing-mode: tb;
+        transform: rotate(180deg);
+    }
+    &__firstName, &__lastName {
+        font-family: "Fira Mono";
+        font-size: 55px;
+        line-height: 1.2em;
+        color: #f0f0f0;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 1px solid transparent;
+    }
+    &__firstName {
+        animation: typefirstName 1s steps(9) 1s forwards,
+        flashingBorder 1s step-end 1s;
+    }
+    &__lastName {
+        margin: 150px 0 0 20px;
+        animation: typelastName 1s steps(8) 2s forwards,
+        flashingBorder 1s step-end 2s infinite;
+    }
+    &__speciality {
+        font-family: "Cutive Mono";
+        font-size: 25px;
+        letter-spacing: 7px;
+        color: #acacac;
+        opacity: 0;
+        animation: appearance 1s ease-out 3.5s forwards;
+    }
+    &__photo {
+        width: 70%;
+        height: fit-content;
+        margin-right: -610px;
+        opacity: 0;
+        animation: slide .7s ease-out .5s forwards;
+    }
+}
+
+@keyframes slide {
+    to {margin-right: 0; opacity: 1;}
+}
+
+@keyframes typefirstName {
+    to {height: 9ch;}
+}
+
+@keyframes typelastName {
+    to {height: 8ch;}
+}
+
+@keyframes flashingBorder {
+    0% {border-color: #f0f0f0;}
+    50% {border-color: transparent;}
+    100% {border-color: #f0f0f0;}
+}
+

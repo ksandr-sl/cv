@@ -1,0 +1,50 @@
+.intro {
+    width: 100%;
+    display: flex;
+
+    &__left-side, &__right-side {
+        width: 50%;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 50px 50px;
+    }
+    &__left-side {
+        background-color: #292a2d;
+        color: #fff;
+        padding-left: 80px;
+        opacity: 0;
+        animation: appearance .7s ease-out .5s forwards;
+    }
+    // &__contacts {}
+    &__contact {
+        display: flex;
+        line-height: 1.5em;
+    }
+    &__contact-image {
+        width: 14px;
+        margin-right: 15px;
+    }
+    &__contact-text {
+        font-family: "Tilt Neon";
+        color: #fff;
+    }
+    // &__right-side {}
+    &__title {
+        font-family: "Fira Mono";
+        color: #292a2d;
+        margin-bottom: 20px;
+        font-size: 20px;
+        letter-spacing: 0.2em;
+    }
+    &__text {
+        font-family: "Tilt Neon";
+        line-height: 1.5em;
+        color: #6b6b6b;
+    }
+}
+
+@keyframes appearance {
+    to {opacity: 1;}
+}

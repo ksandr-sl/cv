@@ -1,0 +1,80 @@
+.info-section {
+    display: flex;
+    padding: 50px 0;
+    position: relative;
+
+    &__left-side, &__right-side {
+        width: 50%;
+    }
+    &__left-side {
+        padding: 0 50px 0 80px;
+    }
+    &__right-side {
+        padding: 0 70px 0 50px;
+    }
+    &__right-side::before {
+        content: " ";
+        display: block;
+        background-color: #abacab;
+        width: 2px;
+        height: 90%;
+        position: absolute;
+        left: 50%;
+        top: -90%;
+        animation: verticalLineSlide 1s ease forwards;
+    }
+    &__item {
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-family: "Fira Mono";
+        color: #292a2d;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    &__subtitle {
+        font-family: "Fira Mono";
+        color: #555;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        display: block;
+    }
+    &__skill-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__skill-point {
+        background-image: url(../img/svg/emptyCircle.svg);
+        width: 20px;
+        height: 20px;
+    }
+    &__image {
+        width: 14px;
+    }
+    &__text {
+        font-family: "Tilt Neon";
+        line-height: 1.5em;
+        color: #6b6b6b;
+        margin-bottom: 20px;
+    }
+}
+
+.code {
+    font-family: "Source Code Pro";
+    overflow: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.--fill {
+    background-image: url(../img/svg/fillCircle.svg);
+}
+
+@keyframes verticalLineSlide {
+    to {top: 50px;}
+}
